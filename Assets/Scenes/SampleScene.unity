@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18303609, g: 0.22871786, b: 0.30673864, a: 1}
+  m_IndirectSpecularColor: {r: 0.18303573, g: 0.22871718, b: 0.3067376, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -572,7 +572,7 @@ Transform:
   m_GameObject: {fileID: 452548144}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.32, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -752,6 +752,7 @@ MonoBehaviour:
   librasSpeed: 0
   isWalking: 1
   miss: 0
+  missedLetter: 
   enemie: {fileID: 1201329265804061107, guid: e88573a67b839c84f806ab658a15b3e9, type: 3}
 --- !u!4 &581624371
 Transform:

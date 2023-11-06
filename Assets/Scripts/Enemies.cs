@@ -28,27 +28,27 @@ public class Enemies : MonoBehaviour
         } 
         else if (GameManager.instance.currentLevel == 1){
             maxHealth = 30;
-            GameManager.instance.emitterSpeed = 1f;
-            GameManager.instance.librasSpeed = 1.5f;
+            GameManager.instance.emitterSpeed = 2f;
+            GameManager.instance.librasSpeed = 1f;
         }
         else if (GameManager.instance.currentLevel == 2){
-            maxHealth = 60;
+            maxHealth = 40;
             GameManager.instance.emitterSpeed = 1.5f;
-            GameManager.instance.librasSpeed = 0.75f;
+            GameManager.instance.librasSpeed = 1.5f;
         }
         else if (GameManager.instance.currentLevel == 3){
-            maxHealth = 60;
+            maxHealth = 50;
             GameManager.instance.emitterSpeed = 1f;
             GameManager.instance.librasSpeed = 1.5f;
         }
         else if (GameManager.instance.currentLevel == 4){
-            maxHealth = 80;
+            maxHealth = 60;
             GameManager.instance.emitterSpeed = 1f;
-            GameManager.instance.librasSpeed = 1f;
+            GameManager.instance.librasSpeed = 1.25f;
         }
         else if (GameManager.instance.currentLevel == 5){
             maxHealth = 80;
-            GameManager.instance.emitterSpeed = 1f;
+            GameManager.instance.emitterSpeed = 0.75f;
             GameManager.instance.librasSpeed = 1.5f;
         }
 
