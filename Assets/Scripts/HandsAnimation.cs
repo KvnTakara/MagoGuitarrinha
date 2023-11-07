@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandsAnimation : MonoBehaviour
 {
     Animator animator;
+
     public bool handCooldown;
 
     private void Start()
@@ -14,7 +15,10 @@ public class HandsAnimation : MonoBehaviour
 
     void Update()
     {
-        handCooldown = !handCooldown;
+        if (Input.anyKeyDown)
+        {
+            handCooldown = !handCooldown;
+        }
 
         if (handCooldown)
         {

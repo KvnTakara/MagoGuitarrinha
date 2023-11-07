@@ -82,10 +82,6 @@ public class Enemies : MonoBehaviour
             {
                 isEnemyDead = true;
 
-                // Add a Impulse against the Enemy Sprite after it is defeated.
-                rb.freezeRotation = false;
-                rb.AddForce(new Vector3(Random.Range(3f, 6f), Random.Range(3f, 4f), 0.3f), ForceMode.Impulse);
-
                 // Changes stage configuration.
                 GameManager.instance.currentLevel++;
                 GameManager.instance.enemieDefeated = true;
@@ -96,6 +92,12 @@ public class Enemies : MonoBehaviour
 
     IEnumerator EnemyDefeated()
     {
+        yield return new WaitForSeconds(1);
+
+        // Add a Impulse against the Enemy Sprite after it is defeated.
+        rb.freezeRotation = false;
+        rb.AddForce(new Vector3(Random.Range(3f, 6f), Random.Range(3f, 4f), 0.3f), ForceMode.Impulse);
+
         yield return new WaitForSeconds(3);
 
         // Scenario starts moving again.

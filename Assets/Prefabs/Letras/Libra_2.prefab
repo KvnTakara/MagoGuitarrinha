@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToDestroy: 50
+  letter: {fileID: 0}
+  attack: {fileID: 8977330200417104375, guid: d3f3979e80e300341940f94a64dc28a2, type: 3}
+  missedletter: 
 --- !u!54 &4976315026558614946
 Rigidbody:
   m_ObjectHideFlags: 0

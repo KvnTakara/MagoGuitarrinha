@@ -7,6 +7,7 @@ public class Libras : MonoBehaviour
 {
     public KeyCode keyToDestroy;
     public GameObject letter;
+    public GameObject attack;
     public string missedletter;
 
     Rigidbody rb;
@@ -27,6 +28,7 @@ public class Libras : MonoBehaviour
         if ( Input.GetKeyDown( keyToDestroy ) )
         {
             GameManager.instance.enemyLifePoints--;
+            GameObject attackEffect = Instantiate(attack, transform.position, Quaternion.identity);
             Destroy( gameObject );
         }
 

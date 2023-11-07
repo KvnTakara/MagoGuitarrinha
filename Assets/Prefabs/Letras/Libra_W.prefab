@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToDestroy: 119
   letter: {fileID: 8322227930818444252, guid: ed32c801b65d745488a47016091a1f8f, type: 3}
+  attack: {fileID: 8977330200417104375, guid: d3f3979e80e300341940f94a64dc28a2, type: 3}
   missedletter: W
 --- !u!54 &7681212640943883762
 Rigidbody:
