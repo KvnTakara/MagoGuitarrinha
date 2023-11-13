@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class LibrasEmitter : MonoBehaviour
 {
-    public GameObject[] Lvl0;
     public GameObject[] Lvl1;
     public GameObject[] Lvl2;
     public GameObject[] Lvl3;
     public GameObject[] Lvl4;
     public GameObject[] Lvl5;
+    public GameObject[] Lvl6;
 
     public GameObject[] Libras;
     public GameObject[] newLibras;
@@ -20,14 +20,16 @@ public class LibrasEmitter : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.instance.currentLevel == 0){Libras = Lvl0;}
-        else if (GameManager.instance.currentLevel == 1){Libras = Lvl1;}
+        if (GameManager.instance.currentLevel == 1){Libras = Lvl1;}
         else if (GameManager.instance.currentLevel == 2){Libras = Lvl2;}
         else if (GameManager.instance.currentLevel == 3){Libras = Lvl3;}
         else if (GameManager.instance.currentLevel == 4){Libras = Lvl4;}
         else if (GameManager.instance.currentLevel == 5){Libras = Lvl5;}
+        else if (GameManager.instance.currentLevel == 6){Libras = Lvl6;}
 
         newLibras = Libras;
+
+        GameManager.instance.callGuia = true;
 
         StartCoroutine( LetterGenerator( GameManager.instance.emitterSpeed ) );
     }

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public int currentLevel = 0;
+    public int currentLevel = 1;
 
     public float playerLifePoints;
     public float playerMaxLifePoints = 10;
@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public bool isWalking = true;
     public bool miss;
     public string missedLetter;
+    public bool callGuia = false;
 
     public GameObject enemie;
 

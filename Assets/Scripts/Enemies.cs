@@ -21,35 +21,35 @@ public class Enemies : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Setting Current Level Difficulty.
-        if ( GameManager.instance.currentLevel == 0){ 
+        if ( GameManager.instance.currentLevel == 1){ 
             maxHealth = 20;
             GameManager.instance.emitterSpeed = 2.5f;
             GameManager.instance.librasSpeed = 1f;
         } 
-        else if (GameManager.instance.currentLevel == 1){
+        else if (GameManager.instance.currentLevel == 2){
             maxHealth = 30;
             GameManager.instance.emitterSpeed = 2f;
             GameManager.instance.librasSpeed = 1f;
         }
-        else if (GameManager.instance.currentLevel == 2){
+        else if (GameManager.instance.currentLevel == 3){
             maxHealth = 40;
             GameManager.instance.emitterSpeed = 1.5f;
             GameManager.instance.librasSpeed = 1.5f;
         }
-        else if (GameManager.instance.currentLevel == 3){
+        else if (GameManager.instance.currentLevel == 4){
             maxHealth = 50;
             GameManager.instance.emitterSpeed = 1f;
             GameManager.instance.librasSpeed = 1.5f;
         }
-        else if (GameManager.instance.currentLevel == 4){
+        else if (GameManager.instance.currentLevel == 5){
             maxHealth = 60;
             GameManager.instance.emitterSpeed = 1f;
             GameManager.instance.librasSpeed = 1.25f;
         }
-        else if (GameManager.instance.currentLevel == 5){
+        else if (GameManager.instance.currentLevel == 6){
             maxHealth = 80;
-            GameManager.instance.emitterSpeed = 0.75f;
-            GameManager.instance.librasSpeed = 1.5f;
+            GameManager.instance.emitterSpeed = 0.85f;
+            GameManager.instance.librasSpeed = 1.4f;
         }
 
         GameManager.instance.enemyLifePoints = maxHealth;
