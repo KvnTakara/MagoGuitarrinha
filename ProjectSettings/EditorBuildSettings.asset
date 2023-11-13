@@ -6,7 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7f2dcc847a83acc4db45cdbe0aea9b65
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Desafio.unity
+    guid: ed7a77eb4261a7342854071768c3e18e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

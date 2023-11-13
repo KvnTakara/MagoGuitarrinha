@@ -27,27 +27,27 @@ public class Enemies : MonoBehaviour
             GameManager.instance.librasSpeed = 1f;
         } 
         else if (GameManager.instance.currentLevel == 2){
-            maxHealth = 30;
+            maxHealth = 25;
             GameManager.instance.emitterSpeed = 2f;
             GameManager.instance.librasSpeed = 1f;
         }
         else if (GameManager.instance.currentLevel == 3){
-            maxHealth = 40;
+            maxHealth = 30;
             GameManager.instance.emitterSpeed = 1.5f;
             GameManager.instance.librasSpeed = 1.5f;
         }
         else if (GameManager.instance.currentLevel == 4){
-            maxHealth = 50;
+            maxHealth = 35;
             GameManager.instance.emitterSpeed = 1f;
             GameManager.instance.librasSpeed = 1.5f;
         }
         else if (GameManager.instance.currentLevel == 5){
-            maxHealth = 60;
+            maxHealth = 40;
             GameManager.instance.emitterSpeed = 1f;
             GameManager.instance.librasSpeed = 1.25f;
         }
         else if (GameManager.instance.currentLevel == 6){
-            maxHealth = 80;
+            maxHealth = 60;
             GameManager.instance.emitterSpeed = 0.85f;
             GameManager.instance.librasSpeed = 1.4f;
         }
@@ -105,6 +105,7 @@ public class Enemies : MonoBehaviour
         yield return new WaitForSeconds(6);
 
         // This Enemy object is destroyed.
+        GameManager.instance.playerLifePoints = GameManager.instance.playerMaxLifePoints;
         Destroy(gameObject);
     }
 }

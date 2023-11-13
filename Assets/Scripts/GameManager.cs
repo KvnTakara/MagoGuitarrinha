@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public bool isWalking = true;
     public bool miss;
+    public int missTyping = 4;
+    public bool isBlocked = false;
     public string missedLetter;
     public bool callGuia = false;
 
@@ -38,9 +40,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (enemieDefeated)
+        if (enemieDefeated && currentLevel <= 6)
         {
-            playerLifePoints = playerMaxLifePoints;
             enemieDefeated = false;
             SpawnEnemie();
         }
@@ -49,6 +50,15 @@ public class GameManager : MonoBehaviour
         {
             miss = false;
             Miss();
+        }
+
+        if (Input.anyKeyDown && !isWalking && !Input.GetKeyDown(KeyCode.Escape))
+        {
+            missTyping--;
+        }
+        if (missTyping <= 0)
+        {
+            isBlocked = true;
         }
     }
 

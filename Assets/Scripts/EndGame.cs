@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
@@ -15,9 +16,9 @@ public class EndGame : MonoBehaviour
             isGameOver = true;
         }
 
-        if (Input.anyKeyDown && isGameOver)
+        if (Input.GetKeyDown(KeyCode.Escape) && isGameOver)
         {
-            //SceneManager.LoadScene(Menu);
+            SceneManager.LoadScene("Menu");
         }
     }
 }

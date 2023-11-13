@@ -20,7 +20,7 @@ public class HandsAnimation : MonoBehaviour
             handCooldown = !handCooldown;
         }
 
-        if (handCooldown)
+        if (handCooldown && !GameManager.instance.isBlocked)
         {
             if ( Input.GetKeyDown(KeyCode.A))
             {
@@ -126,6 +126,9 @@ public class HandsAnimation : MonoBehaviour
             {
                 animator.Play("Hand_Z", -1);
             }
+        } else if (handCooldown && GameManager.instance.isBlocked)
+        {
+            animator.Play("NoHand", -1);
         }
 
         if ( GameManager.instance.isWalking)

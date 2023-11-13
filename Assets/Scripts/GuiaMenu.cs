@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GuiaMenu : MonoBehaviour
@@ -17,7 +18,12 @@ public class GuiaMenu : MonoBehaviour
         {
             OpenGuia();
             isPaused = true;
-        } else if (Input.anyKeyDown && isPaused)
+        }
+        else if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else if (Input.anyKeyDown && isPaused)
         {
             CloseGuia();
             isPaused = false;

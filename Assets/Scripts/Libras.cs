@@ -25,9 +25,10 @@ public class Libras : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if ( Input.GetKeyDown( keyToDestroy ) )
+        if ( Input.GetKeyDown( keyToDestroy ) && !GameManager.instance.isBlocked )
         {
             GameManager.instance.enemyLifePoints--;
+            GameManager.instance.missTyping = 4;
             GameObject attackEffect = Instantiate(attack, transform.position, Quaternion.identity);
             Destroy( gameObject );
         }
@@ -42,6 +43,8 @@ public class Libras : MonoBehaviour
 
         if ( GameManager.instance.miss )
         {
+            GameManager.instance.missTyping = 4;
+            GameManager.instance.isBlocked = false;
             rb.isKinematic = false;
             rb.AddForce(Vector3.down,ForceMode.Impulse);
             StartCoroutine(DestroyMiss());
