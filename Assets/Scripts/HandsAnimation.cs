@@ -126,9 +126,14 @@ public class HandsAnimation : MonoBehaviour
             {
                 animator.Play("Hand_Z", -1);
             }
-        } else if (handCooldown && GameManager.instance.isBlocked)
+        }
+
+        if (GameManager.instance.isBlocked)
         {
-            animator.Play("NoHand", -1);
+            GetComponent<SpriteRenderer>().enabled = false;
+        } else
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
         }
 
         if ( GameManager.instance.isWalking)

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public bool isWalking = true;
     public bool miss;
-    public int missTyping = 4;
+    public int missTyping = 5;
     public bool isBlocked = false;
     public string missedLetter;
     public bool callGuia = false;

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.instance.isBlocked)
+        {
+            animator.SetBool("isBlocked", true);
+        } else
+        {
+            animator.SetBool("isBlocked", false);
+        }
     }
 }
